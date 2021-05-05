@@ -1,7 +1,7 @@
 {
 	"name"        : "qcubed-4/i18n",
 	"description" : "Comprehensive i18n project for translating PHP files.",
-	"type"        : "qcubed-library",
+	"type"        : "library",
 	"keywords"    : ["i18n","i10n","po","gettext"],
 	"homepage"    : "https://github.com/qcubed-4/i18n",
 	"license"     : "MIT",
