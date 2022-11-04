@@ -16,7 +16,7 @@ class SCFileTest extends SCTest
 	/** @var  \QCubed\I18n\SimpleCacheTranslator */
 	protected $translator;
 
-	public function setUp()
+	public function setUp() : void
 	{
 		$this->translator = new \QCubed\I18n\SimpleCacheTranslator();
 
@@ -38,7 +38,7 @@ class SCFileTest extends SCTest
 	}
 
 
-	public function tearDown()
+	public function tearDown() : void
 	{
 		parent::tearDown();
 

@@ -16,7 +16,7 @@ class SCMockCacheTest extends SCTest
 	/** @var  \QCubed\I18n\SimpleCacheTranslator */
 	protected $translator;
 
-	public function setUp()
+	public function setUp() : void
 	{
 		$this->translator = new \QCubed\I18n\SimpleCacheTranslator();
 		$cache = new MockCache();

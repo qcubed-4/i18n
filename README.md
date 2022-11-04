@@ -1,4 +1,4 @@
-# QCubed-4\i18n
+# QCubed\i18n
 An attempt to put together a comprehensive, standalone language translation tool for PHP.
 
 This was originally a fork of the excellent work by Raúl Ferràs (raul.ferras@gmail.com  

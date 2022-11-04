@@ -8,9 +8,9 @@ require_once(__DIR__ . "/../../tools/i18n-app.inc.php"); // keep this
 
 use QCubed\I18n\TranslationService as TService;
 
-class SCTest extends \PHPUnit_Framework_TestCase
+class SCTest extends \PHPUnit\Framework\TestCase
 {
-    public function setUp()
+    public function setUp() : void
     {
         $translator = new \QCubed\I18n\SimpleCacheTranslator();
 
@@ -37,16 +37,16 @@ class SCTest extends \PHPUnit_Framework_TestCase
 
     public function testBasicTranslation()
     {
-        $str = \t("Required");
+        $str = t("Required");
         $this->assertEquals("Obligatorio", $str);
     }
 
     public function testPlural()
     {
-        $str = \tp("<b>Results:</b> 1 %s found.", "<b>Results:</b> %s %s found.", 1);
+        $str = tp("<b>Results:</b> 1 %s found.", "<b>Results:</b> %s %s found.", 1);
         $this->assertEquals("<b>Resultados:</b> Hay 1 %s.", $str);
 
-        $str = \ tp("<b>Results:</b> 1 %s found.", "<b>Results:</b> %s %s found.", 2);
+        $str = tp("<b>Results:</b> 1 %s found.", "<b>Results:</b> %s %s found.", 2);
         $this->assertEquals("<b>Resultados:</b> Hay %s %s.", $str);
     }
 
@@ -56,16 +56,16 @@ class SCTest extends \PHPUnit_Framework_TestCase
      */
     public function testMultiline()
     {
-        $str = \t("Line 1\nLine 2");
+        $str = t("Line 1\nLine 2");
         $this->assertEquals("Línea 1\nLínea 2", $str);
     }
 
     public function testDomainAndContext()
     {
-        $str = \t("Welcome", "dom1", "Welcome panel");
+        $str = t("Welcome", "dom1", "Welcome panel");
         $this->assertEquals("Bienvenidos", $str);
 
-        $str = \t("Welcome", "dom1", "Howdy");
+        $str = t("Welcome", "dom1", "Howdy");
         $this->assertEquals("Hola", $str);
     }
 }

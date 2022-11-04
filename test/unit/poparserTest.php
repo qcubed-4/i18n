@@ -4,9 +4,9 @@ use Sepia\PoParser\Parser;
 use Sepia\PoParser\Handler\FileHandler;
 use Sepia\PoParser\Handler\StringHandler;
 
-class PoParserTest extends \PHPUnit_Framework_TestCase
+class PoParserTest extends \PHPUnit\Framework\TestCase
 {
-    public function tearDown()
+    public function tearDown() : void
     {
         parent::tearDown();
 
