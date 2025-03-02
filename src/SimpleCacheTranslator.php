@@ -90,7 +90,7 @@ class SimpleCacheTranslator implements TranslatorInterface
      * @param SimpleCache\CacheInterface|null $cache The cache to use. Can be specified later user setCache
      * @param bool $blnRequiresCleaning True if your cache cannot accept just any string as a key
      */
-    public function __construct(SimpleCache\CacheInterface $cache = null, $blnRequiresCleaning = true)
+    public function __construct(?SimpleCache\CacheInterface $cache = null, $blnRequiresCleaning = true)
     {
         if ($cache) {
             $this->setCache($cache, $blnRequiresCleaning);
